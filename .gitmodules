@@ -1,0 +1,6 @@
+[submodule "sigma"]
+	path = sigma
+	url = https://greengb@dev.azure.com/greengb/sigma/_git/sigma
+[submodule "eigen"]
+	path = eigen
+	url = https://gitlab.com/libeigen/eigen.git
