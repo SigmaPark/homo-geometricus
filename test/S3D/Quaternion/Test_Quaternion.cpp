@@ -5,8 +5,8 @@
 
 
 #include "Test_Quaternion.hpp"
-#include "Euclid/Euclid.hpp"
-#include "Mathexpr/Mathexpr.hpp"
+#include "S3D/Euclid/Euclid.hpp"
+#include "SGM/Mathexpr/Mathexpr.hpp"
 
 
 using s3d::Vector;

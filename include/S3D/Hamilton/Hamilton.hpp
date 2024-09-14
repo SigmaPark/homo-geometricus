@@ -9,9 +9,9 @@
 #define _S3D_HAMILTON_
 
 
-#include "High_Templar/Countable.hpp"
-#include "High_Templar/High_Templar.hpp"
-#include "Mathexpr/Mathexpr.hpp"
+#include "SGM/High_Templar/Countable.hpp"
+#include "SGM/High_Templar/High_Templar.hpp"
+#include "SGM/Mathexpr/Mathexpr.hpp"
 #include <limits>
 #include <complex>
 #include <cmath>

@@ -6,8 +6,8 @@
 
 #pragma once
 #include "../Test_s3d.hpp"
-#include "Specification/Specification.hpp"
-#include "Euclid/Euclid.hpp"
+#include "SGM/Specification/Specification.hpp"
+#include "S3D/Euclid/Euclid.hpp"
 
 
 namespace s3d::spec

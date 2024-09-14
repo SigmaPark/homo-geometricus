@@ -65,11 +65,11 @@ bool wt::Tests(wchar_t const* const module_title) noexcept
 //========//========//========//========//=======#//========//========//========//========//=======#
 
 
-#include "Hamilton/Test_Hamilton.hpp"
-#include "Decomposition/Test_Decomposition.hpp"
-#include "Euclid/Test_Euclid.hpp"
-#include "Quaternion/Test_Quaternion.hpp"
-#include "Affine/Test_Affine.hpp"
+#include "S3D/Hamilton/Test_Hamilton.hpp"
+#include "S3D/Decomposition/Test_Decomposition.hpp"
+#include "S3D/Euclid/Test_Euclid.hpp"
+#include "S3D/Quaternion/Test_Quaternion.hpp"
+#include "S3D/Affine/Test_Affine.hpp"
 
 
 void test() noexcept(false)

@@ -5,7 +5,7 @@
 
 
 #include "Test_Euclid.hpp"
-#include "Mathexpr/Mathexpr.hpp"
+#include "SGM/Mathexpr/Mathexpr.hpp"
 
 
 using s3d::Vector;

@@ -7,8 +7,8 @@
 #pragma once
 
 #include "../Test_s3d.hpp"
-#include "Hamilton/Hamilton.hpp"
-#include "Specification/Specification.hpp"
+#include "S3D/Hamilton/Hamilton.hpp"
+#include "SGM/Specification/Specification.hpp"
 
 
 namespace s3d::spec

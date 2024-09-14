@@ -9,9 +9,9 @@
 #define _S3D_EUCLID_
 
 
-#include "Decomposition/Decomposition.hpp"
-#include "Array/Array.hpp"
-#include "Abbreviable/Nullable.hpp"
+#include "S3D/Decomposition/Decomposition.hpp"
+#include "SGM/Array/Array.hpp"
+#include "SGM/Abbreviable/Nullable.hpp"
 
 
 namespace s3d

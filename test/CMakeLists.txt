@@ -16,24 +16,26 @@ endif()
 message("-- CMAKE_C_COMPILER=${CMAKE_C_COMPILER}")
 message("-- CMAKE_CXX_COMPILER=${CMAKE_CXX_COMPILER}")
 
+set(SGM_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../sigma/include)
+set(EIGEN_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../eigen)
+set(INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../include)
+
 file(
 	GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS
 	${CMAKE_CURRENT_SOURCE_DIR}/*.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/*.hpp
+	${INCLUDE_DIR}/*.hpp
 )
 
 add_executable(
 	S3D_test 
 	${SRC_FILES}
-	${CMAKE_CURRENT_SOURCE_DIR}/../sigma/lib/Specification/Specification.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/../sigma/lib/SGM/Specification/Specification.cpp
 )
-
-set(SGM_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../sigma/include)
-set(EIGEN_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../eigen)
-set(INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../include)
 
 target_include_directories(
 	S3D_test PRIVATE
-	${SGM_DIR}
+	${SGM_INCLUDE_DIR}
 	${EIGEN_DIR}
 	${INCLUDE_DIR}
 )

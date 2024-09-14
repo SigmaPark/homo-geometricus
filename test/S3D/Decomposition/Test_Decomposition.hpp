@@ -5,7 +5,7 @@
 
 
 #pragma once
-#include "Specification/Specification.hpp"
+#include "SGM/Specification/Specification.hpp"
 
 
 namespace s3d::spec

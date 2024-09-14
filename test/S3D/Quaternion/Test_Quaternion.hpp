@@ -6,7 +6,7 @@
 
 #pragma once
 #include "../Hamilton/Test_Hamilton.hpp"
-#include "Quaternion/Quaternion.hpp"
+#include "S3D/Quaternion/Quaternion.hpp"
 
 
 namespace s3d::spec

@@ -9,7 +9,7 @@
 #define _S3D_QUATERNION_
 
 
-#include "Hamilton/Hamilton.hpp"
+#include "S3D/Hamilton/Hamilton.hpp"
 
 
 namespace s3d

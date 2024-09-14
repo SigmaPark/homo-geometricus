@@ -6,7 +6,7 @@
 
 #include "../Hamilton/Test_Hamilton.hpp"
 #include "Test_Decomposition.hpp"
-#include "Decomposition/Decomposition.hpp"
+#include "S3D/Decomposition/Decomposition.hpp"
 
 
 using s3d::Matrix;

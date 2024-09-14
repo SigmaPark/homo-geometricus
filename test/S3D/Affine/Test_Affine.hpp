@@ -6,7 +6,7 @@
 
 #pragma once
 #include "../Hamilton/Test_Hamilton.hpp"
-#include "Affine/Affine.hpp"
+#include "S3D/Affine/Affine.hpp"
 
 
 namespace s3d::spec

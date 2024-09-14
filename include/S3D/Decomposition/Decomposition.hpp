@@ -9,8 +9,8 @@
 #define _S3D_DECOMPOSITION_
 
 
-#include "Hamilton/Hamilton.hpp"
-#include "Flag_Set/Flag_Set.hpp"
+#include "S3D/Hamilton/Hamilton.hpp"
+#include "SGM/Flag_Set/Flag_Set.hpp"
 
 
 namespace s3d

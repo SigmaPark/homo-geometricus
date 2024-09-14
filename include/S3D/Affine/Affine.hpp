@@ -9,9 +9,9 @@
 #define _S3D_AFFINE_
 
 
-#include "Euclid/Euclid.hpp"
-#include "Quaternion/Quaternion.hpp"
-#include "Boomerang/Boomerang.hpp"
+#include "S3D/Euclid/Euclid.hpp"
+#include "S3D/Quaternion/Quaternion.hpp"
+#include "SGM/Boomerang/Boomerang.hpp"
 
 
 namespace s3d

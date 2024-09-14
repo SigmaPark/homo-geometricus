@@ -8,7 +8,7 @@
 #include <cfloat>
 #include <cmath>
 #include <limits>
-#include "Type_Analysis/Type_Analysis.hpp"
+#include "SGM/Type_Analysis/Type_Analysis.hpp"
 
 
 //	C++17 or higher version of language support is required.
