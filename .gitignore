@@ -468,5 +468,8 @@ FodyWeavers.xsd
 # prefix convention
 \[*\]_*.*
 
+#3rd party library
+external_library/
+
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,visualstudiocode,cmake
