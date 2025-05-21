@@ -5,13 +5,11 @@
 
 
 #include "Test_Euclid.hpp"
-#include "SGM/Mathexpr/Mathexpr.hpp"
 
 
 using s3d::Vector;
 using s3d::UnitVec;
-
-auto constexpr Pi = sgm::Mathexpr::pi<float>();
+using s3d::spec::Pi;
 
 
 template<class...TYPES>
@@ -97,8 +95,8 @@ static void Direction()
 	&&	s3d::Direction::are_orthogonal( u1, u2, u1.cross(u2) )
 	);
 
-	::_identical( s3d::Direction::angle(u1, Vector<float, 3>{1, 1, 0}).v(), ::Pi/4 );
-	::_identical( s3d::Direction::angle(u1, -u1).v(), ::Pi );
+	::_identical( s3d::Direction::angle(u1, Vector<float, 3>{1, 1, 0}).v(), Pi/4 );
+	::_identical( s3d::Direction::angle(u1, -u1).v(), Pi );
 }
 
 

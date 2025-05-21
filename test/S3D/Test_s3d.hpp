@@ -8,8 +8,7 @@
 #include <cfloat>
 #include <cmath>
 #include <limits>
-#include "SGM/Type_Analysis/Type_Analysis.hpp"
-
+#include <type_traits>
 
 //	C++17 or higher version of language support is required.
 
@@ -21,6 +20,9 @@ namespace s3d::spec
 
 	template<class TAG>  
 	struct _Equivalent;
+
+	inline auto constexpr Pi 
+	=	static_cast<float>(3.14159265358979323846264338327950288419716939937511L);
 
 }
 
@@ -35,8 +37,8 @@ private:
 		static_assert(std::numeric_limits<T>::is_iec559, "NOT a Real Number.");
 
 		auto constexpr res 
-		=	sgm::is_Same<T, double>::value ? T(DBL_EPSILON)
-		:	sgm::is_Same<T, long double>::value ? T(LDBL_EPSILON)
+		=	std::is_same<T, double>::value ? T(DBL_EPSILON)
+		:	std::is_same<T, long double>::value ? T(LDBL_EPSILON)
 		:	/* otherwise */ T(FLT_EPSILON);
 
 		return res;
@@ -53,7 +55,7 @@ public:
 		else if constexpr (std::numeric_limits<L>::is_iec559)
 			return std::abs(Lhs - rhs) < static_cast<L>(1e3) * _epsilon<L>();
 		else
-			return sgm::Compile_Fails(); // "no method to compare them."
+			return false; // "no method to compare them."
 	}
 };
 //--------//--------//--------//--------//-------#//--------//--------//--------//--------//-------#

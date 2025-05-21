@@ -17,7 +17,7 @@ add_library(S3D_lib INTERFACE ${INCLUDE_FILES})
 target_include_directories(
     S3D_lib INTERFACE 
     ${INCLUDE_DIR}
-	${SGM_INCLUDE_DIR}
+	${SGM_INCLUDE_DIR}	
 	${EIGEN_DIR}    
 )
 

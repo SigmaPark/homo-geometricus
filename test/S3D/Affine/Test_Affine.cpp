@@ -5,7 +5,6 @@
 
 
 #include "Test_Affine.hpp"
-#include "SGM/Mathexpr/Mathexpr.hpp"
 #include <vector>
 
 
@@ -13,8 +12,7 @@ using s3d::Matrix;
 using s3d::Vector;
 using s3d::UnitVec;
 using s3d::OrthogonalMat;
-
-auto constexpr Pi = sgm::Mathexpr::pi<float>();
+using s3d::spec::Pi;
 
 
 template<class...TYPES>
@@ -127,7 +125,7 @@ static void Composition_and_Transfer()
 	}
 	{
 		s3d::Rigid_Body_Transform const
-			rbtr1 = s3d::Afn<float, 2>.rotate(::Pi/2).translate(1, 0),
+			rbtr1 = s3d::Afn<float, 2>.rotate(Pi/2).translate(1, 0),
 			rbtr2 = s3d::Afn<float, 2>.translate(0, -1);
 
 		::_identical
@@ -139,7 +137,7 @@ static void Composition_and_Transfer()
 
 		Vec1
 		>>=	s3d::Afn<float, 2>
-			.	rotate(::Pi/2)
+			.	rotate(Pi/2)
 			.	translate(1, 0)
 			.	scale(2)
 			.	translate(0, -1);
@@ -158,7 +156,7 @@ static void Composition_and_Transfer_2()
 		(	v1
 			>>	s3d::Afn<float, 3>
 				.	translate(Vector<float>{0, 2, 0})
-				.	rotate(UnitVec<float, 3>{1, 1, 1}, ::Pi*2.f/3.f)
+				.	rotate(UnitVec<float, 3>{1, 1, 1}, Pi*2.f/3.f)
 			>>	s3d::Afn<float, 3>.translate(2, 0, 0).inv()
 		,	Vector<float, 3>{-2, 1, 2}
 		);
@@ -170,7 +168,7 @@ static void Composition_and_Transfer_2()
 		,	Vector<float, 3>{0, 0, 3}
 		};
 
-		iterable >>= s3d::Afn<float, 3>.rotate(UnitVec<float, 3>{1, 1, 1}, ::Pi*2.f/3.f);
+		iterable >>= s3d::Afn<float, 3>.rotate(UnitVec<float, 3>{1, 1, 1}, Pi*2.f/3.f);
 
 		::_identical( iterable.at(0), Vector<float, 3>{0, 1, 0} );
 		::_identical( iterable.at(1), Vector<float, 3>{0, 0, 2} );
@@ -201,7 +199,7 @@ static void Reflection()
 
 static void Euler_Angles()
 {
-	float const alpha = ::Pi/5.f,  beta = ::Pi/7.f,  gamma = ::Pi/8.f;
+	float const alpha = Pi/5.f,  beta = Pi/7.f,  gamma = Pi/8.f;
 
 	float const
 		ca = std::cos(alpha),  cb = std::cos(beta),  cg = std::cos(gamma),
