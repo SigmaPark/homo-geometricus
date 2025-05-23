@@ -1,3 +1,14 @@
+include(FetchContent)
+FetchContent_Declare(
+	How2use
+	GIT_REPOSITORY https://github.com/SigmaPark/How2use.git
+	GIT_TAG v2.1.0
+)
+
+set(BUILD_GUIDE_PROJ OFF CACHE BOOL "Disable How2use's guide project build" FORCE)
+FetchContent_MakeAvailable(How2use)
+set(BUILD_GUIDE_PROJ ON CACHE BOOL "" FORCE)
+
 if(MSVC)
 	add_definitions(-D_WINDOWS_SOLUTION_)
 
@@ -22,10 +33,7 @@ file(
 	${CMAKE_CURRENT_SOURCE_DIR}/*.hpp
 )
 
-add_executable(
-	S3D_test 
-	${SRC_FILES}
-	${CMAKE_CURRENT_SOURCE_DIR}/../sigma/lib/SGM/Specification/Specification.cpp
-)
+add_executable(S3D_test ${SRC_FILES})
 
 target_link_libraries(S3D_test PRIVATE S3D_lib)
+target_link_libraries(S3D_test PRIVATE How2use_lib)

@@ -4,10 +4,8 @@
 
 
 include(ExternalProject)
-
 set(EIGEN_BUILD_DIR ${CMAKE_BINARY_DIR}/eigen)
 set(EIGEN_LIB_DIR ${EIGEN_BUILD_DIR}/src/eigen)
-
 ExternalProject_Add(
 	eigen
 	URL https://gitlab.com/libeigen/eigen/-/archive/3.3.7/eigen-3.3.7.tar.gz
@@ -18,9 +16,18 @@ ExternalProject_Add(
 	TEST_COMMAND ""
 )
 
+include(FetchContent)
+FetchContent_Declare(
+	sigma
+	GIT_REPOSITORY https://github.com/SigmaPark/homo-genericus.git
+	GIT_TAG v1.2.1
+)
+
+set(BUILD_TEST_PROJ OFF CACHE BOOL "Disable sigma's test project build" FORCE)
+FetchContent_MakeAvailable(sigma)
+set(BUILD_TEST_PROJ ON CACHE BOOL "" FORCE)
 
 set(INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../include)
-set(SGM_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../sigma/include)
 
 file(
 	GLOB_RECURSE INCLUDE_FILES CONFIGURE_DEPENDS
@@ -29,12 +36,10 @@ file(
 
 add_library(S3D_lib INTERFACE ${INCLUDE_FILES})
 
+target_link_libraries(S3D_lib INTERFACE Sigma_lib)
+
 target_include_directories(
 	S3D_lib INTERFACE 
 	${INCLUDE_DIR}
-	${SGM_INCLUDE_DIR}	
 	${EIGEN_LIB_DIR}
 )
-
-target_compile_features(S3D_lib INTERFACE cxx_std_17)
-target_compile_definitions(S3D_lib INTERFACE SGM_CXX_STANDARD=2017)

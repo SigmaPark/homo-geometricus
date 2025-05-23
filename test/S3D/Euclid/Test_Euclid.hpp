@@ -6,7 +6,7 @@
 
 #pragma once
 #include "../Test_s3d.hpp"
-#include "SGM/Specification/Specification.hpp"
+#include "SGM/How2use.hpp"
 #include "S3D/Euclid/Euclid.hpp"
 
 
@@ -15,7 +15,7 @@ namespace s3d::spec
 	
 	enum class _Equiv_Euclid_Tag;
 
-	SGM_SPECIFICATION_CLASS(Test_, Euclid, /**/);
+	SGM_HOW2USE_CLASS(Test_, Euclid, /**/);
 
 }
 

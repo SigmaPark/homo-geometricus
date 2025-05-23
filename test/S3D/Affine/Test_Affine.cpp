@@ -18,7 +18,7 @@ using s3d::spec::Pi;
 template<class...TYPES>
 static void _identical(TYPES...types)
 {
-	SGM_SPEC_ASSERT( s3d::spec::_Equivalent<s3d::spec::_Equiv_Affine_Tag>::calc(types...) );
+	SGM_H2U_ASSERT( s3d::spec::_Equivalent<s3d::spec::_Equiv_Affine_Tag>::calc(types...) );
 }
 //========//========//========//========//=======#//========//========//========//========//=======#
 
@@ -233,7 +233,7 @@ static void Euler_Angles()
 //========//========//========//========//=======#//========//========//========//========//=======#
 
 
-SGM_SPECIFICATION_TEST(s3d::spec::Test_, Affine, /**/)
+SGM_HOW2USE_TESTS(s3d::spec::Test_, Affine, /**/)
 {	::Construction
 ,	::Composition_and_Transfer
 ,	::Composition_and_Transfer_2

@@ -8,7 +8,7 @@
 
 #include "../Test_s3d.hpp"
 #include "S3D/Hamilton/Hamilton.hpp"
-#include "SGM/Specification/Specification.hpp"
+#include "SGM/How2use.hpp"
 
 
 namespace s3d::spec
@@ -16,7 +16,7 @@ namespace s3d::spec
 	
 	enum class _Equiv_Hamilton_Tag;
 
-	SGM_SPECIFICATION_CLASS(Test_, Hamilton, /**/);
+	SGM_HOW2USE_CLASS(Test_, Hamilton, /**/);
 
 }
 

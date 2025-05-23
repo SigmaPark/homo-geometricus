@@ -5,12 +5,12 @@
 
 
 #pragma once
-#include "SGM/Specification/Specification.hpp"
+#include "SGM/How2use.hpp"
 
 
 namespace s3d::spec
 {
 	
-	SGM_SPECIFICATION_CLASS(Test_, Decomposition, /**/);
+	SGM_HOW2USE_CLASS(Test_, Decomposition, /**/);
 
 }

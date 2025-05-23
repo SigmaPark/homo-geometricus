@@ -14,7 +14,7 @@ namespace s3d::spec
 
 	enum class _Equiv_Quaternion_Tag;
 	
-	SGM_SPECIFICATION_CLASS(Test_, Quaternion, /**/);
+	SGM_HOW2USE_CLASS(Test_, Quaternion, /**/);
 
 }
 

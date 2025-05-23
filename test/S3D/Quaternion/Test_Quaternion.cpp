@@ -16,7 +16,7 @@ using s3d::spec::Pi;
 template<class...ARGS>
 static void _identical(ARGS...args)
 {
-	SGM_SPEC_ASSERT( s3d::spec::_Equivalent<s3d::spec::_Equiv_Quaternion_Tag>::calc(args...) );
+	SGM_H2U_ASSERT( s3d::spec::_Equivalent<s3d::spec::_Equiv_Quaternion_Tag>::calc(args...) );
 }
 //--------//--------//--------//--------//-------#//--------//--------//--------//--------//-------#
 
@@ -224,7 +224,7 @@ static void Slerp()
 //--------//--------//--------//--------//-------#//--------//--------//--------//--------//-------#
 
 
-SGM_SPECIFICATION_TEST(s3d::spec::Test_, Quaternion, /**/)
+SGM_HOW2USE_TESTS(s3d::spec::Test_, Quaternion, /**/)
 {	::Construction
 ,	::Substitution
 ,	::Element

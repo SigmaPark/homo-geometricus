@@ -14,7 +14,7 @@ namespace s3d::spec
 	
 	enum class _Equiv_Affine_Tag;
 	
-	SGM_SPECIFICATION_CLASS(Test_, Affine, /**/);
+	SGM_HOW2USE_CLASS(Test_, Affine, /**/);
 
 }
 

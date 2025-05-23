@@ -15,7 +15,7 @@ using s3d::spec::Pi;
 template<class...TYPES>
 static void _identical(TYPES...types)
 {
-	SGM_SPEC_ASSERT( s3d::spec::_Equivalent<s3d::spec::_Equiv_Euclid_Tag>::calc(types...) );
+	SGM_H2U_ASSERT( s3d::spec::_Equivalent<s3d::spec::_Equiv_Euclid_Tag>::calc(types...) );
 }
 //--------//--------//--------//--------//-------#//--------//--------//--------//--------//-------#
 
@@ -88,7 +88,7 @@ static void Direction()
 {
 	UnitVec<float, 3> u1{1, 0, 0}, u2{0, 1, 0};
 
-	SGM_SPEC_ASSERT
+	SGM_H2U_ASSERT
 	(	s3d::Direction::are_parallel
 		(	u1, -u1, Vector<float, 3>{2, 2, 2} - Vector<float, 3>{0, 2, 2}
 		)
@@ -131,7 +131,7 @@ static void Position()
 //--------//--------//--------//--------//-------#//--------//--------//--------//--------//-------#
 
 
-SGM_SPECIFICATION_TEST(s3d::spec::Test_, Euclid, /**/)
+SGM_HOW2USE_TESTS(s3d::spec::Test_, Euclid, /**/)
 {	::Construction
 ,	::Projection
 ,	::Distance
