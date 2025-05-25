@@ -50,7 +50,7 @@ public:
 	{
 		if constexpr( sizeof...(TYPES) > 0 )
 			return calc(Lhs, rhs) && calc(Lhs, args...);
-		else if constexpr(std::numeric_limits<L>::is_integer || sgm::is_Pointer<L>::value)
+		else if constexpr(std::numeric_limits<L>::is_integer || std::is_pointer<L>::value)
 			return Lhs == rhs;
 		else if constexpr (std::numeric_limits<L>::is_iec559)
 			return std::abs(Lhs - rhs) < static_cast<L>(1e3) * _epsilon<L>();
