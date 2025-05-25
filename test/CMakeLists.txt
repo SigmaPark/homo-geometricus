@@ -1,3 +1,8 @@
+#	SPDX-FileCopyrightText: (c) 2025 Jin-Eon Park <greengb@naver.com> <sigma@gm.gist.ac.kr>
+#	SPDX-License-Identifier: MIT License
+#=========#=========#=========#=========#=========#=========#=========#=========#=========#=========
+
+
 include(FetchContent)
 FetchContent_Declare(
 	How2use
