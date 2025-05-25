@@ -35,6 +35,7 @@ file(
 )
 
 add_library(S3D_lib INTERFACE ${INCLUDE_FILES})
+add_dependencies(S3D_lib eigen)
 
 target_link_libraries(S3D_lib INTERFACE Sigma_lib)
 
