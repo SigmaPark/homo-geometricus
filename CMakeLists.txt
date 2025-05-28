@@ -16,8 +16,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 add_subdirectory(lib)
 
-option(BUILD_TEST_PROJ "Build S3D test suite" ON)
+option(BUILD_S3D_TEST_PROJ "Build S3D test suite" ON)
 
-if(BUILD_TEST_PROJ)
+if(BUILD_S3D_TEST_PROJ)
 	add_subdirectory(test)
 endif()

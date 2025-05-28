@@ -20,12 +20,11 @@ include(FetchContent)
 FetchContent_Declare(
 	sigma
 	GIT_REPOSITORY https://github.com/SigmaPark/homo-genericus.git
-	GIT_TAG v1.2.1
+	GIT_TAG v1.2.2
 )
 
-set(BUILD_TEST_PROJ OFF CACHE BOOL "Disable sigma's test project build" FORCE)
+set(BUILD_SIGMA_TEST_PROJ OFF CACHE BOOL "Disable sigma's test project build" FORCE)
 FetchContent_MakeAvailable(sigma)
-set(BUILD_TEST_PROJ ON CACHE BOOL "" FORCE)
 
 set(INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../include)
 
