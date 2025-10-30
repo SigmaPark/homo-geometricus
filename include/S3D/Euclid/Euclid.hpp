@@ -10,8 +10,8 @@
 
 
 #include "S3D/Decomposition/Decomposition.hpp"
-#include "SGM/Array/Array.hpp"
-#include "SGM/Abbreviable/Nullable.hpp"
+#include "SGM/Container/Array.hpp"
+#include "SGM/Wrapper/Nullable.hpp"
 
 
 namespace s3d

@@ -20,7 +20,7 @@ include(FetchContent)
 FetchContent_Declare(
 	sigma
 	GIT_REPOSITORY https://github.com/SigmaPark/homo-genericus.git
-	GIT_TAG v1.2.2
+	GIT_TAG v2.0.0
 )
 
 set(BUILD_SIGMA_TEST_PROJ OFF CACHE BOOL "Disable sigma's test project build" FORCE)

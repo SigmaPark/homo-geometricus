@@ -10,7 +10,7 @@
 
 
 #include "S3D/Hamilton/Hamilton.hpp"
-#include "SGM/Flag_Set/Flag_Set.hpp"
+#include "SGM/Utility/Flag_Set.hpp"
 
 
 namespace s3d

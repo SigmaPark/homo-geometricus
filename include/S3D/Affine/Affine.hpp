@@ -11,7 +11,7 @@
 
 #include "S3D/Euclid/Euclid.hpp"
 #include "S3D/Quaternion/Quaternion.hpp"
-#include "SGM/Boomerang/Boomerang.hpp"
+#include "SGM/Wrapper/Boomerang.hpp"
 
 
 namespace s3d
